@@ -10,3 +10,6 @@ class Post(models.Model):
     pub_date = models.DateTimeField(auto_now_add=True)
     # author
     # thumbnail
+
+    def __str__(self):
+        return self.title
