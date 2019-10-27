@@ -1,0 +1,15 @@
+{% extends 'base_layout.html' %}
+
+{% block title %}
+{{ post.title }}
+{% endblock %}
+
+{% block content %}
+<div class="post-single">
+    <header>
+        <h2> {{ post.title }} </h2>
+        <p><time title="{{ post.pub_date }}">{{ post.pub_date }}</time></p>
+    </header>
+    <p>{{ post.body }}</p>
+</div>
+{% endblock %}
