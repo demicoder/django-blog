@@ -18,8 +18,14 @@
         <div class="post">
             <header>
                 <h2> <a href="{{ post.slug }}">{{ post.title }} </a> </h2>
-                <time> {{ post.pub_date}}</time>
             </header>
+
+            {{ post.truncate_body }}
+
+            <footer>
+                <p><time> {{ post.pub_date}}</time></p>
+            </footer>
+
         </div>
         <hr>
         {% endfor %}
