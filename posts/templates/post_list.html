@@ -1,16 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'base_layout.html' %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Post List</title>
-</head>
+{% block title %}
+    Home
+{% endblock %}
 
-<body>
-
-
+{% block content %}
     <h1>Latest Posts</h1>
 
     <div class="posts">
@@ -20,17 +14,14 @@
                 <h2> <a href="{{ post.slug }}">{{ post.title }} </a> </h2>
             </header>
 
-            {{ post.truncate_body }}
+            <p>{{ post.truncate_body }}</p>
 
             <footer>
                 <p><time> {{ post.pub_date}}</time></p>
             </footer>
 
         </div>
-        <hr>
         {% endfor %}
     </div>
 
-</body>
-
-</html>
+{% endblock %}
