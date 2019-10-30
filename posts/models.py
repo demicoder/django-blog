@@ -8,11 +8,11 @@ class Post(models.Model):
     body = models.TextField()
     slug = models.SlugField()
     pub_date = models.DateTimeField(auto_now_add=True)
+    thumbnail = models.ImageField(default='default.png', blank=True)
     # author
-    # thumbnail
 
     def __str__(self):
-        return self.title
+            return self.title
 
     def truncate_body(self):
         if (len(self.body) > 100):

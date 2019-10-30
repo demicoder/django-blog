@@ -11,5 +11,6 @@
         <p><time title="{{ post.pub_date }}">{{ post.pub_date }}</time></p>
     </header>
     <p>{{ post.body }}</p>
+    <img src="{{ post.thumbnail.url }}" alt="{{ post.title }}">
 </div>
 {% endblock %}
