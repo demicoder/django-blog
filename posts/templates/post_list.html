@@ -1,15 +1,21 @@
 {% extends 'base_layout.html' %}
 
 {% block title %}
-    Home
+Home
 {% endblock %}
 
 {% block content %}
-    <h1>Latest Posts</h1>
+<h1>Latest Posts</h1>
 
-    <div class="posts">
-        {% for post in posts %}
-        <div class="post">
+<div class="posts">
+    {% for post in posts %}
+    <div class="post">
+        <div class="post-list-thumbnail">
+            <a href="{{ post.slug }}">
+                <img src="{{ post.thumbnail.url }}" alt="{{ post.title }}">
+            </a>
+        </div>
+        <div class="post-list-content">
             <header>
                 <h2> <a href="{{ post.slug }}">{{ post.title }} </a> </h2>
             </header>
@@ -19,9 +25,9 @@
             <footer>
                 <p><time> {{ post.pub_date}}</time></p>
             </footer>
-
         </div>
-        {% endfor %}
     </div>
+    {% endfor %}
+</div>
 
 {% endblock %}
