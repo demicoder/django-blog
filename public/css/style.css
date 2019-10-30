@@ -49,13 +49,16 @@ body {
 }
 
 .post .post-list-thumbnail {
-    flex: .4;
+    flex: .3;
     margin-right: 2rem;
-    width: 100px;
+}
+
+.post .post-list-thumbnail img {
+    width: 100%;
 }
 
 .post .post-list-content {
-    flex: 1.6;
+    flex: 1.7;
 }
 
 .post-single header h2 {
@@ -76,4 +79,16 @@ body {
     display: block;
     display: block;
     margin: 2rem 0;
+}
+
+@media (min-width: 600px) {
+
+    .post .post-list-thumbnail {
+        flex: .6;
+    }
+
+    .post .post-list-content {
+        flex: 1.4;
+    }
+
 }
