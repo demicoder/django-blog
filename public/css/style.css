@@ -32,6 +32,10 @@ body {
     display: flex;
 }
 
+.post p {
+    font-size: 120%;
+}
+
 .post h2 {
     font-size: 1.5rem;
     color: #000;
@@ -81,7 +85,8 @@ body {
     margin: 2rem 0;
 }
 
-@media (min-width: 600px) {
+
+@media (max-width: 800px) {
 
     .post .post-list-thumbnail {
         flex: .6;
@@ -91,4 +96,10 @@ body {
         flex: 1.4;
     }
 
+}
+
+@media(max-width:400px) {
+    .post {
+        display: block;
+    }
 }
