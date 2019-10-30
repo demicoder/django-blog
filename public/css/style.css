@@ -32,10 +32,6 @@ body {
     display: flex;
 }
 
-.post p {
-    font-size: 120%;
-}
-
 .post h2 {
     font-size: 1.5rem;
     color: #000;
